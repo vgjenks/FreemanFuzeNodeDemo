@@ -1,0 +1,27 @@
+{
+	"_DbType": "Values are 'mock', 'mysql', 'postgres', 'mongodb', 'redis', etc.",
+	"DbType": "mysql",
+	"Database": {
+		"development": {
+			"host": "mysql",
+			"database": "node_demo",
+			"user": "root",
+			"password": "coffeetime",
+			"connectionLimit": 100
+		},
+		"staging": {
+			"host": "",
+			"database": "",
+			"user": "",
+			"password": "",
+			"connectionLimit": 100
+		},
+		"production": {
+			"host": "",
+			"database": "",
+			"user": "",
+			"password": "",
+			"connectionLimit": 100
+		}
+	}
+}

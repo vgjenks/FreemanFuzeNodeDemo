@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<% include head %>
+
+<body>
+	<% include header %>
+	<div class="container" style="padding-top: 50px;">
+		<h1>
+			<%= title %>
+		</h1>
+		<p>
+			<div>
+				<div class="row">
+					<div class="col-md-3">
+						Username
+					</div>
+					<div class="col-md-3">
+						Created
+					</div>
+					<div class="col-md-3">
+						Last Login
+					</div>
+					<div class="col-md-3">
+						Is Active
+					</div>
+				</div>
+				<hr>
+				<% users.forEach(user => { %>
+				<div class="row">
+					<div class="col-md-3">
+						<%= user.username %>
+					</div>
+					<div class="col-md-3">
+						<%= user.created.toDateString() %>
+					</div>
+					<div class="col-md-3">
+						<%= user.last_login %>
+					</div>
+					<div class="col-md-3">
+						<%= Boolean(user.active) %>
+					</div>
+				</div>
+				<% }); %>
+			</div>
+		</p>
+	</div>
+</body>
+
+<% include footer %>
+
+</html>

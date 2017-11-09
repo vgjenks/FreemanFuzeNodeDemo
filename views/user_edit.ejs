@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<% include head %>
+<%
+	let u = user;
+	if (!user) {
+		u = {
+			user_id: 0,
+			username: "",
+			password: "",
+			active: false
+		};
+	}
+%>
+<body>
+	<% include header %>
+	<div class="container" style="padding-top: 50px;">
+		<h1>
+			Add/Edit User
+		</h1>
+		<p>
+			<div class="col-md-6">
+				<form id="editUserForm" method="post" action="<%= action %>">
+					<div class="form-group">
+						<div class="col-md-3 control-label">Username</div>
+						<div class="col-md-7">
+							<input type="text" id="username" name="username" placeholder="Username (your@email.com)" class="form-control" value="<%= u.username %>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-3 control-label">Password</div>
+						<div class="col-md-7">
+							<input type="password" id="password" name="password" placeholder="Password" class="form-control" value="<%= u.password %>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-3 control-label">Is Active</div>
+						<div class="col-md-7">
+							<% if (user && Boolean(user.active) === true ) { %>
+							<input type="checkbox" id="active" name="active" class="checkbox" checked />
+							<% } else { %>
+							<input type="checkbox" id="active" name="active" class="checkbox" />
+							<% } %>
+						</div>
+					</div>
+					<div>
+						<button type="submit" id="saveButton" class="btn btn-success pull-right">Save User</button>
+					</div>
+				</form>
+			</div>
+		</p>
+	</div>
+</body>
+
+<% include footer %>
+
+</html>

@@ -1,0 +1,32 @@
+body {
+	/* padding: 50px; */
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+.body-container {
+	padding-top: 30px;
+}
+
+/* Show validation results in red */
+.field-validation-error {
+	color: red;
+}
+/* Change background color of invalid text inputs to light red */
+input[type="text"].input-validation-error
+{
+	background-color: #fcc;
+}
+
+#loginModal .modal-content {
+	overflow: auto;
+	padding-bottom: 15px;
+}
+
+.tab-container {
+	padding-top: 15px;
+}
+
